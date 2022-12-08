@@ -1,0 +1,8 @@
+{
+  "contest": 187,
+  "handle": "BClabs",
+  "risk": "3",
+  "title": "Actor can send an arbitrary token when adding liquidity",
+  "issueId": 12,
+  "issueUrl": "https://github.com/code-423n4/2022-12-Stealth-Project-findings/issues/12"
+}
