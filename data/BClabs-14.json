@@ -1,0 +1,8 @@
+{
+  "contest": 187,
+  "handle": "BClabs",
+  "risk": "3",
+  "title": "Anyone can call addLiquidity function and be the router",
+  "issueId": 14,
+  "issueUrl": "https://github.com/code-423n4/2022-12-Stealth-Project-findings/issues/14"
+}
