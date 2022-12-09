@@ -1,0 +1,8 @@
+{
+  "contest": 187,
+  "handle": "rvierdiiev",
+  "risk": "3",
+  "title": "User can initiate Router.exactInputSingle swap with params.recipient == 0 and do not receive output tokens",
+  "issueId": 24,
+  "issueUrl": "https://github.com/code-423n4/2022-12-Stealth-Project-findings/issues/24"
+}
