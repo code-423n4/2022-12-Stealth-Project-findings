@@ -32,3 +32,14 @@ https://github.com/code-423n4/2022-12-Stealth-Project/blob/fc8589d7d8c1d8488fd97
 ```solidity
         state.status &= ~LOCKED;
 ```
+
+## Use hash instead of nested mapping
+
+Can instead use a bytes32 => IPool mapping with keecak256(abi.encode(_fee, _tickSpacing, _lookback, _tokenA, _tokenB))
+
+https://github.com/code-423n4/2022-12-Stealth-Project/blob/fc8589d7d8c1d8488fd97ccc46e1ff11c8426ac2/maverick-v1/contracts/models/Factory.sol#L64-L65
+
+```solidity
+        require(pools[_fee][_tickSpacing][_lookback][_tokenA][_tokenB] == IPool(address(0)), "Factory:POOL_ALREADY_EXISTS");
+
+```
