@@ -1,0 +1,8 @@
+{
+  "contest": 187,
+  "handle": "0xSmartContract",
+  "risk": "2",
+  "title": "Division before multiplication causing significant loss of precision",
+  "issueId": 43,
+  "issueUrl": "https://github.com/code-423n4/2022-12-Stealth-Project-findings/issues/43"
+}
