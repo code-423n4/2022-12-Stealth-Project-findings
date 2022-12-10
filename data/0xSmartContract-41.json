@@ -1,0 +1,8 @@
+{
+  "contest": 187,
+  "handle": "0xSmartContract",
+  "risk": "2",
+  "title": "safeTransfer function does not check for existence of ERC20 token contract",
+  "issueId": 41,
+  "issueUrl": "https://github.com/code-423n4/2022-12-Stealth-Project-findings/issues/41"
+}
