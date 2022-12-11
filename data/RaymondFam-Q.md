@@ -70,14 +70,13 @@ When setting a new owner, it is entirely possible to accidentally transfer owner
 
 Here is the instance entailed:
 
-[File: Factory.sol#L33-L38](https://github.com/code-423n4/2022-12-Stealth-Project/blob/main/maverick-v1/contracts/models/Factory.sol#L33-L38)
+[File: Factory.sol#L40-L44](https://github.com/code-423n4/2022-12-Stealth-Project/blob/main/maverick-v1/contracts/models/Factory.sol#L40-L44)
 
 ```
-    function setProtocolFeeRatio(uint16 _protocolFeeRatio) external {
-        require(msg.sender == owner, "Factory:NOT_ALLOWED");
-        require(_protocolFeeRatio <= ONE_3_DECIMAL_SCALE, "Factory:PROTOCOL_FEE_CANNOT_EXCEED_ONE");
-        protocolFeeRatio = _protocolFeeRatio;
-        emit SetFactoryProtocolFeeRatio(_protocolFeeRatio);
+    function setOwner(address _owner) external {
+        require(msg.sender == owner && _owner != address(0), "Factory:NOT_ALLOWED");
+        owner = _owner;
+        emit SetFactoryOwner(_owner);
     }
 ```
 ## Events associated with setter functions
