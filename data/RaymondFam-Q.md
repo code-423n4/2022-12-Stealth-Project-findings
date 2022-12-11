@@ -201,3 +201,18 @@ Here are the instance entailed:
 
 43:        (bool success, ) = to.call{value: value}(new bytes(0));
 ```
+## Use enum or struct for lock and action states
+Consider adopting enum(s)/struct(s) on the following sets of constants to make the code more presentable and structured:
+
+[File: Pool.sol#L31-L38](https://github.com/code-423n4/2022-12-Stealth-Project/blob/main/maverick-v1/contracts/models/Pool.sol#L31-L38)
+
+```
+    uint8 constant NO_EMERGENCY_UNLOCKED = 0;
+    uint8 constant LOCKED = 1;
+    uint8 constant EMERGENCY = 2;
+
+    uint256 constant ACTION_EMERGENCY_MODE = 911;
+    uint256 constant ACTION_SET_PROTOCOL_FEES = 1;
+    uint256 constant ACTION_CLAIM_PROTOCOL_FEES_A = 2;
+    uint256 constant ACTION_CLAIM_PROTOCOL_FEES_B = 3;
+```
