@@ -38,11 +38,12 @@ Solidity contracts can use a special form of comments, i.e., the Ethereum Natura
 
 https://docs.soliditylang.org/en/v0.8.16/natspec-format.html
 
-Here are the contract instances partially lacking NatSpec:
+Here are some of the contract instances partially lacking NatSpec:
 
 [File: Factory.sol](https://github.com/code-423n4/2022-12-Stealth-Project/blob/main/maverick-v1/contracts/models/Factory.sol)
+[File: Router.sol](https://github.com/code-423n4/2022-12-Stealth-Project/blob/main/router-v1/contracts/Router.sol)
 
-Here are the contract instances lacking NatSpec in its entirety:
+Here are some of the contract instances lacking NatSpec in its entirety:
 
 [File: Deployer.sol](https://github.com/code-423n4/2022-12-Stealth-Project/blob/main/maverick-v1/contracts/libraries/Deployer.sol)
 [File: Pool.sol](https://github.com/code-423n4/2022-12-Stealth-Project/blob/main/maverick-v1/contracts/models/Pool.sol)
@@ -181,4 +182,23 @@ For instance, the constructor instance below may be refactored as follows:
 -        metadata = _metadata;
 +        setMetadata( _metadata);
 ```
- 
+## Missing checks for contract existence
+Performing low-level calls without confirming contract’s existence (not yet deployed or have been destructed) could return success even though no function call was executed as documented in the link below:
+
+https://docs.soliditylang.org/en/v0.8.7/control-structures.html#error-handling-assert-require-revert-and-exceptions
+
+Consider having account existence checked prior to calling if needed.
+
+Here are the instance entailed:
+
+[File: TransferHelper.sol](https://github.com/code-423n4/2022-12-Stealth-Project/blob/main/router-v1/contracts/libraries/TransferHelper.sol)
+
+```
+14:        (bool success, bytes memory data) = token.call(abi.encodeWithSelector(IERC20.transferFrom.selector, from, to, value));
+
+24:        (bool success, bytes memory data) = token.call(abi.encodeWithSelector(IERC20.transfer.selector, to, value));
+
+34:        (bool success, bytes memory data) = token.call(abi.encodeWithSelector(IERC20.approve.selector, to, value));
+
+43:        (bool success, ) = to.call{value: value}(new bytes(0));
+```
