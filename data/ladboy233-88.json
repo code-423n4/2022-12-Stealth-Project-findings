@@ -1,0 +1,8 @@
+{
+  "contest": 187,
+  "handle": "ladboy233",
+  "risk": "2",
+  "title": "Stale price is used after the lookup period is passed in TWA",
+  "issueId": 88,
+  "issueUrl": "https://github.com/code-423n4/2022-12-Stealth-Project-findings/issues/88"
+}
