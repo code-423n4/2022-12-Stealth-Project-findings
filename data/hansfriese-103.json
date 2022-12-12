@@ -1,0 +1,8 @@
+{
+  "contest": 187,
+  "handle": "hansfriese",
+  "risk": "2",
+  "title": "Aggregated reserve amounts should be used instead of the first valid tick liquidity",
+  "issueId": 103,
+  "issueUrl": "https://github.com/code-423n4/2022-12-Stealth-Project-findings/issues/103"
+}
