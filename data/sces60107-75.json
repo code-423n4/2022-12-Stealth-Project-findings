@@ -1,0 +1,8 @@
+{
+  "contest": 187,
+  "handle": "sces60107",
+  "risk": "3",
+  "title": "Use wrong reserve values in `Pool.addLiquidity()`",
+  "issueId": 75,
+  "issueUrl": "https://github.com/code-423n4/2022-12-Stealth-Project-findings/issues/75"
+}
