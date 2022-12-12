@@ -188,7 +188,9 @@ https://docs.soliditylang.org/en/v0.8.7/control-structures.html#error-handling-a
 
 Consider having account existence checked prior to calling if needed.
 
-Here are the instance entailed:
+Note: A report associated with `Pool.sol` and `SafeERC20Min.sol` delineating the malicious attack has been separately submitted.  
+
+Here are the other instances entailed:
 
 [File: TransferHelper.sol](https://github.com/code-423n4/2022-12-Stealth-Project/blob/main/router-v1/contracts/libraries/TransferHelper.sol)
 
@@ -201,8 +203,8 @@ Here are the instance entailed:
 
 43:        (bool success, ) = to.call{value: value}(new bytes(0));
 ```
-## Use enum or struct for lock and action states
-Consider adopting enum(s)/struct(s) on the following sets of constants to make the code more presentable and structured:
+## Use enum for lock and action states
+Consider adopting enum(s) on the following sets of constants to make the code more presentable and structured:
 
 [File: Pool.sol#L31-L38](https://github.com/code-423n4/2022-12-Stealth-Project/blob/main/maverick-v1/contracts/models/Pool.sol#L31-L38)
 
