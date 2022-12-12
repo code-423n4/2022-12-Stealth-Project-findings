@@ -1,0 +1,8 @@
+{
+  "contest": 187,
+  "handle": "Chom",
+  "risk": "2",
+  "title": "Slippage control of addLiquidity may go wrong",
+  "issueId": 83,
+  "issueUrl": "https://github.com/code-423n4/2022-12-Stealth-Project-findings/issues/83"
+}
