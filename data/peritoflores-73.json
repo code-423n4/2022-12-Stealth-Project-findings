@@ -1,0 +1,8 @@
+{
+  "contest": 187,
+  "handle": "peritoflores",
+  "risk": "2",
+  "title": "It is possible to create a Pool with any fee - tickSpacing combination which allows different attacks",
+  "issueId": 73,
+  "issueUrl": "https://github.com/code-423n4/2022-12-Stealth-Project-findings/issues/73"
+}
