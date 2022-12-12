@@ -1,0 +1,8 @@
+{
+  "contest": 187,
+  "handle": "Jeiwan",
+  "risk": "3",
+  "title": "`exactInput` allows stealing of funds via a malicious pool contract",
+  "issueId": 64,
+  "issueUrl": "https://github.com/code-423n4/2022-12-Stealth-Project-findings/issues/64"
+}
