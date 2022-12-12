@@ -1,0 +1,8 @@
+{
+  "contest": 187,
+  "handle": "minhtrng",
+  "risk": "2",
+  "title": "Overflow in BinMap can break pool",
+  "issueId": 107,
+  "issueUrl": "https://github.com/code-423n4/2022-12-Stealth-Project-findings/issues/107"
+}
