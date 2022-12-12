@@ -1,0 +1,8 @@
+{
+  "contest": 187,
+  "handle": "cccz",
+  "risk": "2",
+  "title": "When the input token is a rebasing token, the user can expand the total supply of the rebasing token in the callback to steal the output token",
+  "issueId": 55,
+  "issueUrl": "https://github.com/code-423n4/2022-12-Stealth-Project-findings/issues/55"
+}
