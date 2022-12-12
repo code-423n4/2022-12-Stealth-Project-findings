@@ -1,0 +1,8 @@
+{
+  "contest": 187,
+  "handle": "RaymondFam",
+  "risk": "2",
+  "title": "An excess of tokens sent in by traders not refunded in `swap()`",
+  "issueId": 72,
+  "issueUrl": "https://github.com/code-423n4/2022-12-Stealth-Project-findings/issues/72"
+}
