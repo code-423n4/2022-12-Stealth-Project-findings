@@ -190,7 +190,7 @@ Consider having account existence checked prior to calling if needed.
 
 Note: A report associated with `Pool.sol` and `SafeERC20Min.sol` delineating the malicious attack has been separately submitted.  
 
-Here are the other instances entailed:
+Here are the other instances entailed that may not have posed a risk but for informational purpose:
 
 [File: TransferHelper.sol](https://github.com/code-423n4/2022-12-Stealth-Project/blob/main/router-v1/contracts/libraries/TransferHelper.sol)
 
@@ -218,3 +218,12 @@ Consider adopting enum(s) on the following sets of constants to make the code mo
     uint256 constant ACTION_CLAIM_PROTOCOL_FEES_A = 2;
     uint256 constant ACTION_CLAIM_PROTOCOL_FEES_B = 3;
 ```
+## Rebasing tokens
+The protocol does not mention whether or not rebasing tokens will be supported. But, if they will be, traders can steal output token for which `swapCallback()` can be invoked by expanding the total supply of the rebasing token.
+
+[File: Pool.sol#L302](https://github.com/code-423n4/2022-12-Stealth-Project/blob/main/maverick-v1/contracts/models/Pool.sol#L302)
+
+```
+        ISwapCallback(msg.sender).swapCallback(amountIn, amountOut, data);
+```
+Apparently, the contract associated with the external call above does not have to be a shared router and can be separately implemented by the trader. For a created pool, it is possible that the input token is rebasing, allowing anyone to trigger the rebasing event. When calling `swap()`, `swapCallback()` in the callee contract implemented by the trader can be executed to call another contract, which has the admin privilege for the rebasing token to trigger the rebasing event. When the rebasing event expands the input token's total supply, calling `swapCallback()` does not need to send additionally enough input token to the pool, and the pool's balance of the input rebasing token can still become larger enough than its previous input token balance. For this reason, calling `swap()` will not revert in this situation, and the trader can receive the correspondingly extra output token amount although the trader has not sent in enough input tokens to the pool.
