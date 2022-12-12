@@ -1,0 +1,8 @@
+{
+  "contest": 187,
+  "handle": "ak1",
+  "risk": "2",
+  "title": "Pool.sol : Lack of slippage protection for swap",
+  "issueId": 93,
+  "issueUrl": "https://github.com/code-423n4/2022-12-Stealth-Project-findings/issues/93"
+}
