@@ -1,0 +1,8 @@
+{
+  "contest": 187,
+  "handle": "Jeiwan",
+  "risk": "2",
+  "title": "Liquidity cannot be removed by an approved address via Router",
+  "issueId": 67,
+  "issueUrl": "https://github.com/code-423n4/2022-12-Stealth-Project-findings/issues/67"
+}
