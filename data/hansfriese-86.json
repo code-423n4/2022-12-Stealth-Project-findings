@@ -1,0 +1,8 @@
+{
+  "contest": 187,
+  "handle": "hansfriese",
+  "risk": "2",
+  "title": "`PoolInspector.getActiveBins()` returns the wrong bins when it should return an empty array.",
+  "issueId": 86,
+  "issueUrl": "https://github.com/code-423n4/2022-12-Stealth-Project-findings/issues/86"
+}
