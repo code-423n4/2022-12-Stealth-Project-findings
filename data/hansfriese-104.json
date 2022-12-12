@@ -1,0 +1,8 @@
+{
+  "contest": 187,
+  "handle": "hansfriese",
+  "risk": "2",
+  "title": "Unnecessary loss of accuracy in calculation of end sqrt price",
+  "issueId": 104,
+  "issueUrl": "https://github.com/code-423n4/2022-12-Stealth-Project-findings/issues/104"
+}
