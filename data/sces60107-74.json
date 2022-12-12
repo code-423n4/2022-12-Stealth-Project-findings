@@ -1,0 +1,8 @@
+{
+  "contest": 187,
+  "handle": "sces60107",
+  "risk": "2",
+  "title": "Inline assembly bug in solidity 0.8.13",
+  "issueId": 74,
+  "issueUrl": "https://github.com/code-423n4/2022-12-Stealth-Project-findings/issues/74"
+}
