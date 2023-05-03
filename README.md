@@ -1,4 +1,6 @@
-# Stealth Project Contest
+# Maverick Contest
+
+*Note: this contest originally ran under the name `Stealth Project`.*
 
 Unless otherwise discussed, this repo will be made public after contest completion, sponsor review, judging, and two-week issue mitigation window.
 
