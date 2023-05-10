@@ -1,6 +1,6 @@
 ---
 sponsor: "Maverick"
-slug: "2022-12-Stealth-Project"
+slug: "2022-12-stealth-project"
 date: "2023-05-03"
 title: "Maverick contest"
 findings: "https://github.com/code-423n4/2022-12-Stealth-Project-findings/issues"
